@@ -1,0 +1,23 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Preparing Medi Log application for deployment"
+    build:
+      commands:
+        - echo "Building static web application"
+        - echo "No build process required for static HTML/CSS/JS"
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+    exclude:
+      - '.git/**/*'
+      - 'node_modules/**/*'
+      - '*.md'
+      - 'server.py'
+      - 'server.js'
+      - 'start-server.sh'
+  cache:
+    paths: []
